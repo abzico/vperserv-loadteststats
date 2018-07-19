@@ -8,19 +8,19 @@ This loadtest focuses on compare general performance between NodeJS and Golang. 
 
 # How
 
-Server is Ubuntu 16.04 (4.4.0-91-generic) with 1G RAM, 1 single CPU 2.399 Ghz with 1 core located in Hongkong.
+Server is Ubuntu 16.04 (4.4.0-91-generic) with 1G RAM, 1 single CPU 2.399 Ghz with 1 core located in Hongkong.  
 Load-test client is macOS 10.13.4 High Sierra machine 8 GB Ram, CPU 2.5 GHz Intel Core i5; initiated from Shenzhen, China connected through VPN server which located in Hongkong to maintain its locality.
 
 Load-testing uses Apache Bench (ab) which is pre-installed on macOS machine.
 
-> This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
-> Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+> This is ApacheBench, Version 2.3 <$Revision: 1807734 $>  
+> Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/  
 > Licensed to The Apache Software Foundation, http://www.apache.org/
 
 Both NodeJS and Go server has similar functionality. Go is the port version from NodeJS as author switched to use but things done in Go's way.
 
-NodeJS => Node 8.10.0,  express 4.15.4, and pg 7.4.1
-Go => Go 1.10.3, jackc/pgx (39bbc98), gorilla/mux (cb46983), valyala/fastjson (c58febb), valyala/quicktemplate (a91e094) 
+**NodeJS** => Node 8.10.0,  express 4.15.4, and pg 7.4.1  
+**Go** => Go 1.10.3, jackc/pgx (39bbc98), gorilla/mux (cb46983), valyala/fastjson (c58febb), valyala/quicktemplate (a91e094) 
 
 There are 3 sets of loadtests done for both NodeJS, and Go server as follows
 
