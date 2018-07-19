@@ -1,0 +1,46 @@
+Completed 5000 requests
+Completed 10000 requests
+Completed 15000 requests
+Completed 20000 requests
+Completed 25000 requests
+Finished 28239 requests
+
+
+Server Software:        nginx/1.10.3
+Server Hostname:        <redacted>
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES128-GCM-SHA256,2048,128
+TLS Server Name:        <redacted>
+
+Document Path:          <redacted>
+Document Length:        72 bytes
+
+Concurrency Level:      10
+Time taken for tests:   60.000 seconds
+Complete requests:      28239
+Failed requests:        0
+Keep-Alive requests:    27960
+Total transferred:      9966972 bytes
+HTML transferred:       2033208 bytes
+Requests per second:    470.65 [#/sec] (mean)
+Time per request:       21.247 [ms] (mean)
+Time per request:       2.125 [ms] (mean, across all concurrent requests)
+Transfer rate:          162.22 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   9.7      0     628
+Processing:    12   20  19.6     16     428
+Waiting:       12   20  19.6     16     428
+Total:         12   21  22.2     16     753
+
+Percentage of the requests served within a certain time (ms)
+  50%     16
+  66%     17
+  75%     19
+  80%     20
+  90%     25
+  95%     36
+  98%    124
+  99%    135
+ 100%    753 (longest request)
