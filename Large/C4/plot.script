@@ -1,0 +1,31 @@
+# output as JPEG
+set terminal jpeg size 1280,720
+# This sets the aspect ratio of the graph
+set size 1, 1
+# The file we'll write to
+set output "graph.jpg"
+# The graph title
+set title "C4 Benchmark Testing - /pins/{x}/{y} - 4649 items (0.68MB)"
+#set key left tp
+set xdata time
+# Draw gridlines oriented on the y axis
+set grid y
+# Specify the *input* format of the time data
+set timefmt "%s"
+# Specify the *output* format for the x-axis tick labels
+set format x "%S"
+# Label the x-axis
+set xlabel 'seconds'
+# Label the y-axis
+set ylabel "response time (ms)"
+# Tell gnuplot to use tabs as the delimiter instead of spaces (default)
+set datafile separator '\t'
+# Set boxwidth (histogram)
+set boxwidth 0.5
+# function to calculate mean
+f(x) = mean_y
+fit f(x) "data.dat" using 2:5 via mean_y
+
+# Plot the data
+plot "data.dat" every ::2 using 2:5 title 'response time (ms)' with boxes, mean_y/4 with lines linetype 3 title 'mean response time (ms)',  mean_y with lines linetype 4 title 'total mean response time (ms)'
+exit

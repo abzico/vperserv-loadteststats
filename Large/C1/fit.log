@@ -1,0 +1,90 @@
+
+
+*******************************************************************************
+Sat Jul 21 06:39:51 2018
+
+
+FIT:    data read from "data.dat" using 2:5
+        format = x:z
+        #datapoints = 54
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = mean_y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   mean_y       
+   0 7.4630732000e+07   0.00e+00  1.00e+00    1.000000e+00
+   3 6.0708113333e+06  -1.28e-05  1.00e-03    1.127778e+03
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 6.07081e+06
+rel. change during last iteration : -1.27982e-10
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 338.443
+variance of residuals (reduced chisquare) = WSSR/ndf   : 114544
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+mean_y          = 1127.78          +/- 46.06        (4.084%)
+
+
+*******************************************************************************
+Sat Jul 21 06:40:20 2018
+
+
+FIT:    data read from "data.dat" using 2:5
+        format = x:z
+        #datapoints = 54
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = mean_y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   mean_y       
+   0 7.4630732000e+07   0.00e+00  1.00e+00    1.000000e+00
+   3 6.0708113333e+06  -1.28e-05  1.00e-03    1.127778e+03
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 6.07081e+06
+rel. change during last iteration : -1.27982e-10
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 338.443
+variance of residuals (reduced chisquare) = WSSR/ndf   : 114544
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+mean_y          = 1127.78          +/- 46.06        (4.084%)
+
+
+*******************************************************************************
+Sat Jul 21 06:40:39 2018
+
+
+FIT:    data read from "data.dat" using 2:5
+        format = x:z
+        #datapoints = 54
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = mean_y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   mean_y       
+   0 7.4630732000e+07   0.00e+00  1.00e+00    1.000000e+00
+   3 6.0708113333e+06  -1.28e-05  1.00e-03    1.127778e+03
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 6.07081e+06
+rel. change during last iteration : -1.27982e-10
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 338.443
+variance of residuals (reduced chisquare) = WSSR/ndf   : 114544
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+mean_y          = 1127.78          +/- 46.06        (4.084%)

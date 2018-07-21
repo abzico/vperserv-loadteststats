@@ -22,7 +22,14 @@ Both NodeJS and Go server has similar functionality. Go is the port version from
 **NodeJS** => Node 8.10.0,  express 4.15.4, and pg 7.4.1  
 **Go** => Go 1.10.3, jackc/pgx (39bbc98), gorilla/mux (cb46983), valyala/fastjson (c58febb), valyala/quicktemplate (a91e094) 
 
-There are 3 sets of loadtests done for both NodeJS, and Go server as follows
+There are 2 categories of tests.
+
+## VerySmall - for empty result returned
+
+See in directory `VerySmall` inside you will see results in each sub-directories categorized according to number of concurrent number.  
+There are 7 sets of loadtests done for both NodeJS, and Go server testing against 76-bytes response, and 683481-bytes response as follows
+
+> As testings are conducted from China mainland. It can be unstable that could significantly differ results especially in terms of total requests served as you could.
 
 1. Concurrent connection (C)=1, Test timelimit in seconds (T)=60s, Limit number of request (R)=1000000
 2. C=10, T=60, R=1000000
@@ -31,6 +38,27 @@ There are 3 sets of loadtests done for both NodeJS, and Go server as follows
 5. C=300, T=60, R=1000000
 6. C=400, T=60, R=1000000
 7. C=500, T=60, R=1000000
+
+Thus in total, we've conducted 28 tests.
+
+## Large - for 4947 items returned
+
+**Note:** This test is conducted after the first publishment of this repository so it has slightly more optimization like JSON string generated from within DB, and minor optimization code.
+
+As result of such query statement will return somewhat large number of items that required server's resource to do the work. It's more reasonable to conduct concurrency up to level 5. [See Load Testing Basics: How many concurrent users is enough](https://www.webperformance.com/load-testing-tools/blog/2011/02/load-testing-basics-how-many-concurrent-users-is-enough/) to calculate what concurrent level should be enough for the game.
+
+I (optimisticly) use 100k visitors per month with 5 minutes on average session, and also divide by 12 hours to reach with 3,333.33 visitors / hour as I don't have clear statisitcs just yet to identify active hours. Then finally I reach with concurrent level of 2.314 (totally low compared to what I initially expect thus reasonable to test around this number). See above articlefor equation and explanation on how to calculate the number.
+
+There are 4 tests (with no NodeJS test as I don't have time to reflect the implementation on NodeJS to be the same as in Golang; as this is done on-the-go after first publishment).
+
+1. C=1, T=60, R=1000000
+2. C=2, T=60, R=1000000
+3. C=3, T=60, R=1000000
+4. C=4, T=60, R=1000000
+
+See results along with graphs in directory `Large`.
+
+## Data
 
 API end-point that serves incoming requests will make DB query in form `SELECT * FROM table WHERE x >= $1 AND x <= $2 AND y >= $3 AND y <= $4;` which is executed through prepared statement for performance. Such table at the time of load-testing has total number or records of 101447.
 
@@ -74,14 +102,12 @@ Keep alive connection in HTTP as well plays an important role. If you disable wi
 
 ## Peak CPU & Memory Usage (per process, not whole server) for Concurrency connection of 500
 
+### 76-bytes
+
 | Server | CPU (%) | Mem (%) |
 | --- | --- | ---: |
 | NodeJS | 30.0 | 8.7 |
 | Go | 30.0 | 2.7 |
-
-## Load-test Statistics
-
-See in corresponding directories C1, C10, C100, C200, C300, C400, and C500.
 
 # Last Word
 
