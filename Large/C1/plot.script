@@ -27,5 +27,5 @@ f(x) = mean_y
 fit f(x) "data.dat" using 2:5 via mean_y
 
 # Plot the data
-plot "data.dat" every ::2 using 2:5 title 'response time (ms)' with boxes, mean_y with lines linetype 3 title 'mean response time (ms)'
+plot "data.dat" every ::2 using 2:5 title 'response time (ms)' with boxes, mean_y with lines linetype 3 title 'mean and total response time (ms)'
 exit
