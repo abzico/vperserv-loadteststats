@@ -31,13 +31,13 @@ There are 7 sets of loadtests done for both NodeJS, and Go server testing agains
 
 > As testings are conducted from China mainland. It can be unstable that could significantly differ results especially in terms of total requests served as you could.
 
-1. Concurrent connection (C)=1, Test timelimit in seconds (T)=60s, Limit number of request (R)=1000000
-2. C=10, T=60, R=1000000
-3. C=100, T=60, R=1000000
-4. C=200, T=60, R=1000000
-5. C=300, T=60, R=1000000
-6. C=400, T=60, R=1000000
-7. C=500, T=60, R=1000000
+1. Concurrent connection (C)=1, Test timelimit in seconds (T)=60s, Limit number of request (R)=1000000 ([see result=](https://github.com/abzico/vperserv-loadteststats/tree/master/VerySmall/C1))
+2. C=10, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/VerySmall/C10))
+3. C=100, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/VerySmall/C100))
+4. C=200, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/VerySmall/C200))
+5. C=300, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/VerySmall/C300))
+6. C=400, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/VerySmall/C400))
+7. C=500, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/VerySmall/C500))
 
 Thus in total, we've conducted 28 tests.
 
@@ -51,10 +51,10 @@ I (optimisticly) use 100k visitors per month with 5 minutes on average session, 
 
 There are 4 tests (with no NodeJS test as I don't have time to reflect the implementation on NodeJS to be the same as in Golang; as this is done on-the-go after first publishment).
 
-1. C=1, T=60, R=1000000
-2. C=2, T=60, R=1000000
-3. C=3, T=60, R=1000000
-4. C=4, T=60, R=1000000
+1. C=1, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/Large/C1) - [graph](https://raw.githubusercontent.com/abzico/vperserv-loadteststats/master/Large/C1/graph.jpg))
+2. C=2, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/Large/C2) - [graph](https://raw.githubusercontent.com/abzico/vperserv-loadteststats/master/Large/C2/graph.jpg))
+3. C=3, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/Large/C3) - [graph](https://raw.githubusercontent.com/abzico/vperserv-loadteststats/master/Large/C3/graph.jpg))
+4. C=4, T=60, R=1000000 ([=](https://github.com/abzico/vperserv-loadteststats/tree/master/Large/C4) - [graph](https://raw.githubusercontent.com/abzico/vperserv-loadteststats/master/Large/C4/graph.jpg))
 
 See results along with graphs in directory `Large`.
 
